@@ -1,0 +1,19 @@
+@import "../../css/vars.css";
+
+.hello-world {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: lighter;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 2px 2px var(--shadow-on-bg);
+
+  transform: scale(0, 0);
+  animation: scale-in 0.2s ease-in-out forwards;
+}
+
+@keyframes scale-in {
+  to {
+    transform: scale(1,1);
+  }
+}
