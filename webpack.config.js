@@ -3,6 +3,7 @@ const path                = require('path')
 const HtmlWebpackPlugin   = require('html-webpack-plugin')
 const ExtractTextPlugin   = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin  = require('clean-webpack-plugin')
+const Dashboard           = require('webpack-dashboard/plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'app'),
@@ -41,7 +42,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Starter'
     }),
-    new ExtractTextPlugin('[name].bundle.css')
+    new ExtractTextPlugin('[name].bundle.css'),
+    new Dashboard()
   ],
   devtool: 'inline-source-map',
   devServer: { 
