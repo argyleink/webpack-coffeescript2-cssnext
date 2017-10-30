@@ -45,12 +45,14 @@ module.exports = {
     new ExtractTextPlugin('[name].bundle.css'),
     new Dashboard()
   ],
-  devtool: 'inline-source-map',
+  devtool: '#eval-cheap-module-source-map', //inline-source-map
   devServer: { 
     contentBase: './public'
   },
+  cache: true,
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'public/')
+    path:     path.resolve(__dirname, 'public/'),
+    pathinfo: true
   }
 }
