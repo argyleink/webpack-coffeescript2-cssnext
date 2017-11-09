@@ -1,11 +1,8 @@
-import styles from './style.css'
+import styles from './hello-world.css'
 
-HelloWorld = ->
+export default HelloWorld = ->
   element = document.createElement('div')
 
   element.className = 'hello-world'
-  element.innerHTML = "Hello from Webpack"
-
+  element.innerHTML = 'Sup Webpack'
   return element
-
-export default HelloWorld
